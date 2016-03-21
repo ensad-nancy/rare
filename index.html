@@ -1,0 +1,65 @@
+  <!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/screen.css">
+</head>
+<body>
+
+<div class="container">
+  <h1 class="mainTitle">RARE</h1>
+</div>
+  <div class="container-fluid">
+
+    <div  class="col-sm-6">
+      <img class="img-responsive" src="https://docs.google.com/drawings/d/1fqmqHT4UmkInXRFzwb1sP9YJv9bpaW1rY1lMahwZjpk/pub?w=767&amp;h=1073">
+
+      <h1 id="pad-content"></h1>
+    </div>
+
+    <div  class="col-sm-3">
+      <h1>TORRENT</h1>
+      <div id="twitter"></div>
+    </div>
+
+    <div  class="col-sm-2">
+      <h1>AGORA</h1>
+      <div id="contacts"></div>
+    </div>
+  </div>
+
+
+  <script id="tweetFeed" type="text/x-handlebars-template">
+    {{#each elements}}
+      <p>{{text}}</p>
+      {{#each entities.media}}
+          <img src="{{media_url}}" class="img-responsive">
+      {{/each}}
+      <hr/>
+    {{/each}}
+  </script>
+  <script id="weMet" type="text/x-handlebars-template">
+    {{debug}}
+    {{#each elements}}
+      <p><strong>
+      {{#if www}}
+          <a href="{{www}}" target="_blank">{{nom-prenom}}</a>
+        {{else}}
+          {{nom-prenom}}
+      {{/if}}
+      </strong>
+      </p>
+            {{#if twitter}}
+        {{twitter}}
+      {{/if}}
+      <p><em>{{Horodateur}}</em></p>
+      <hr/>
+    {{/each}}
+  </script>
+
+
+  <script type="text/javascript" src="./assets/js/all.min.js"></script>
+  <script type="text/javascript" src="./assets/js/rare.js"></script>
+
+</body>
+</html>
