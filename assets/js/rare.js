@@ -26,6 +26,8 @@ $(document).ready( function() {
   }
 
     $("#pad-content").html(getText('https://lite6.framapad.org/p/BsOprKiKo9-vision-rare/export/txt'));
+    $("#pad-content-TORRENT").html(getText('https://lite6.framapad.org/p/8Q2EvwdbMJ-TORRENT/export/txt'));
+    $("#pad-content-AGORA").html(getText('https://lite6.framapad.org/p/8Q2EvwdbMJ-AGORA/export/txt'));
 
 
 })

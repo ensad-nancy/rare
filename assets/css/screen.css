@@ -6749,3 +6749,7 @@ a:visited,
 a:active {
   color: royalblue;
 }
+#pad-content-TORRENT,
+#pad-content-AGORA {
+  padding-bottom: 4em;
+}
