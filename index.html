@@ -7,26 +7,34 @@
 <body>
 
 <div class="container">
-  <h1 class="mainTitle">RARE</h1>
-</div>
-  <div class="container-fluid">
 
-    <div  class="col-sm-6">
+  <h1 class="mainTitle col-md-offset-5">  <img src="assets/images/logo.png" id="logo"><br/>RARE  <hr/></h1>
+
+</div>
+  <div class="container">
+
+    <div  class="col-md-5">
       <img class="img-responsive" src="https://docs.google.com/drawings/d/1fqmqHT4UmkInXRFzwb1sP9YJv9bpaW1rY1lMahwZjpk/pub?w=767&amp;h=1073">
 
       <h1 id="pad-content"></h1>
     </div>
 
-    <div  class="col-sm-3">
-      <h1>TORRENT</h1>
-      <h4 id="pad-content-TORRENT"></h4>
+    <div  class="col-md-4">
+
+      <div class="cartouche">
+        <h1>TORRENT</h1>
+        <h4 id="pad-content-TORRENT"></h4>
+      </div>
 
       <div id="twitter"></div>
     </div>
 
-    <div  class="col-sm-2">
-      <h1>AGORA</h1>
-      <h4 id="pad-content-AGORA"></h4>
+    <div  class="col-md-3">
+
+      <div class="cartouche">
+        <h1>AGORA</h1>
+        <h4 id="pad-content-AGORA"></h4>
+      </div>
 
       <div id="contacts"></div>
     </div>
@@ -37,15 +45,22 @@
 
   <script id="tweetFeed" type="text/x-handlebars-template">
     {{#each elements}}
-      <p>{{text}}</p>
-      {{#each entities.media}}
-          <img src="{{media_url}}" class="img-responsive">
-      {{/each}}
       <hr/>
+      <p>{{text}}</p>
+
+      {{#each entities.media}}
+          <img src="{{media_url}}" class="img-responsive gdraw">
+      {{/each}}
+
+      {{#each entities.urls}}
+          <a href="{{url}}">{{display_url}}</a>
+      {{/each}}
+
     {{/each}}
   </script>
   <script id="weMet" type="text/x-handlebars-template">
     {{#each elements}}
+            <hr/>
       <p><strong>
       {{#if www}}
           <a href="{{www}}" target="_blank">{{nom-prenom}}</a>
@@ -58,7 +73,7 @@
         {{twitter}}
       {{/if}}
       <p><em>{{Horodateur}}</em></p>
-      <hr/>
+
     {{/each}}
   </script>
 

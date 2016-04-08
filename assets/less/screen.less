@@ -1,37 +1,58 @@
 @import '../../bower_components/bootstrap/less/bootstrap.less';
 
+
+@font-size-base:          16px;
+@green : #45b749;
+@base: 4px;
+@font-face {
+  font-family: 'Combat';
+  src: url('../fonts/hinted-Combat.eot');
+  src: url('../fonts/hinted-Combat.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/hinted-Combat.woff2') format('woff2'),
+    url('../fonts/hinted-Combat.woff') format('woff'),
+    url('../fonts/hinted-Combat.ttf') format('truetype'),
+    url('../fonts/hinted-Combat.svg#Combat') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body, html{
 
-  background-color: springgreen;
+  background-color: @green;
   height: 100%;
-
-  font-family: arial;
-
   text-align: center;
 }
 h1 {
-  font-weight: bold;
-  color: white;
-
+  font-family: 'Combat';
+  font-weight: normal;
+  font-style: normal;
 }
 
 .mainTitle {
   text-align: center;
-  font-size: 7em;
   background-color: none;
+  font-size: 8vh;
+}
+#logo {
+  height: 25vh;
+}
+.gdraw {
+  height: 60vh;
 }
 
 hr {
-
-  border-bottom: white 1px solid;
+  border:none;
+  border-bottom: black @base solid;
 
 }
 
 a, a:hover, a:visited, a:active {
-  color: royalblue;
+  color: black;
+  border-bottom: @base/2 black solid;
+  text-decoration: none;
+  text-shadow: 0 3px @green;
+  padding: 0 @base 0 @base;
 }
 
 
-#pad-content-TORRENT, #pad-content-AGORA {
-  padding-bottom: 4em;
-}

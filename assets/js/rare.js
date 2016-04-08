@@ -9,6 +9,8 @@ $(document).ready( function() {
     console.log(data);
 
       $('#twitter').html(templates.tweetFeed( { elements:data } ));
+
+
   })
 
 
@@ -25,9 +27,11 @@ $(document).ready( function() {
     $('#contacts').html(templates.weMet( { elements:_.reverse(data.rep.elements) } ));
   }
 
-    $("#pad-content").html(getText('https://lite6.framapad.org/p/BsOprKiKo9-vision-rare/export/txt'));
-    $("#pad-content-TORRENT").html(getText('https://lite6.framapad.org/p/8Q2EvwdbMJ-TORRENT/export/txt'));
-    $("#pad-content-AGORA").html(getText('https://lite6.framapad.org/p/8Q2EvwdbMJ-AGORA/export/txt'));
+  $("#pad-content").html(getText('https://lite6.framapad.org/p/BsOprKiKo9-vision-rare/export/txt'));
+  $("#pad-content-TORRENT").html(getText('https://lite6.framapad.org/p/8Q2EvwdbMJ-TORRENT/export/txt'));
+  $("#pad-content-AGORA").html(getText('https://lite6.framapad.org/p/8Q2EvwdbMJ-AGORA/export/txt'));
+
+
 
 
 })
